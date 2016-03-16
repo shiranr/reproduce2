@@ -1,0 +1,7 @@
+target/
+.idea/
+out
+.slcache/
+*.iml
+*.ipr
+*.iws
