@@ -14,7 +14,8 @@ class TestController {
         DB localDB = mongo.getDB('reproduce2')
         DBCollection collection = localDB.getCollection('user')
         def result = collection.findOne(new BasicDBObject('name', 'name'))
-        result.version.class == Integer.class
+        assert result.version.class == Integer.class
+        assert result.version.class == Long.class
         render(view: 'index')
     }
 }
